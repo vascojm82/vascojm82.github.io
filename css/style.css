@@ -1,0 +1,119 @@
+body{
+  background-image: url("../assets/light-grey-terrazzo.png");
+}
+
+.nav{
+  position: relative;
+  background-color: #FFFFFF;
+  height: 80.42px;
+  border-bottom: 2px solid #CCCCCC;
+  width: 100%;
+}
+
+.logo{
+  visibility: hidden;
+  float: left;
+  background-color: #4AAAA5;
+  color: #FFFFFF;
+  padding: 0 20px 0 20px;
+}
+
+.nav-links{
+  float: right;
+  width: 25%;
+  visibility: hidden;
+}
+
+.nav-links ul{
+  float: right;
+  list-style: none;
+}
+
+.nav-links ul li{
+    display:inline-block;
+}
+
+.mid-container{
+  clear: both;
+  position: relative;
+  width: 70%;
+  margin: 40px auto 100px auto;
+  border: 1px solid #E2E2E2;
+  padding: 20px 30px;
+  background-color: #FFFFFF;
+}
+
+.header-subcontainer{
+  border-bottom: 2px solid #DDDDDD;
+  margin: auto;
+}
+
+.header-subcontainer h2{
+  color: #4AAAA5;
+}
+
+.image-subcontainer{
+  float: left;
+  width: 22%;
+}
+
+.aside-subcontainer p{
+  color: #AB968A;
+}
+
+.footer{
+  border-top: 5px solid #4AAAA5;
+  background-color: #666666;
+}
+
+.footer p{
+  color: #C1C0BB;
+  text-align: center;
+  padding: 40px 0 10px 0;
+}
+
+/* MEDIA QUERIES */
+
+@media only screen and (max-width: 1367px) {
+  .image-subcontainer{
+    width: 25%;
+  }
+}
+
+@media only screen and (max-width: 1025px) {
+  .image-subcontainer{
+    width: 33%;
+  }
+}
+
+@media only screen and (max-width: 812px) {
+  .nav-links{
+    width: 30%;
+  }
+}
+
+@media only screen and (max-width: 692px) {
+  .nav{
+    border-bottom: none;
+  }
+
+  .logo{
+    display: block;
+    clear: both;
+    margin: auto;
+  }
+  .nav-links{
+    display: block;
+    width: 100%;
+    background-color: white;
+    border-bottom: 2px solid #CCCCCC;
+    margin-bottom: 50px;
+  }
+  .nav-links ul{
+    width: 100%;
+  }
+  .nav-links ul li{
+    display: block;
+    text-align: center;
+  }
+}
