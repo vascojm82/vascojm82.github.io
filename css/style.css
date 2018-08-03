@@ -20,7 +20,7 @@ body{
 
 .nav-links{
   float: right;
-  width: 25%;
+  width: 27%;
   visibility: hidden;
 }
 
@@ -31,6 +31,10 @@ body{
 
 .nav-links ul li{
     display:inline-block;
+}
+
+.nav-links ul li:not(:last-child):after {
+    content:' |';
 }
 
 .mid-container{
@@ -52,16 +56,11 @@ body{
   color: #4AAAA5;
 }
 
-.image-subcontainer{
-  float: left;
-  width: 22%;
-}
-
-.aside-subcontainer p{
-  color: #AB968A;
-}
-
 .footer{
+  position: fixed;    /* Sticky Footer */
+  bottom: 0;
+  width: 100%;
+  /*************/
   border-top: 5px solid #4AAAA5;
   background-color: #666666;
 }
@@ -69,21 +68,97 @@ body{
 .footer p{
   color: #C1C0BB;
   text-align: center;
-  padding: 40px 0 10px 0;
+  padding: 10px 0 10px 0;
 }
+
+
+/* Index page */
+.image-subcontainer{
+  float: left;
+  width: 236px;
+}
+
+.aside-subcontainer p{
+  color: #AB968A;
+}
+/**************************/
+
+/* Contact Page */
+.contact-form label{
+  line-height: 2rem;
+}
+
+.contact-form input, textarea{
+  width: 100%;
+}
+
+.contact-form button{
+  background-color: #4AAAA5;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+/**************************/
+
+/* Portfolio page */
+.frame{
+  display: inline-block;
+  position: relative;
+  width: 30%;
+  height: 30%;
+  margin: 20px 20px
+}
+
+.frame img{
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.image-banner {
+    display: flex;
+    position: absolute;
+    background-color: #4AAAA5;
+    height: 20%;
+    width: 100%;
+    bottom: -5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.image-banner span{
+  color: white;
+  padding: 3px 0 3px 0;
+  margin: auto;
+}
+
+/**************************/
 
 /* MEDIA QUERIES */
 
 @media only screen and (max-width: 1367px) {
   .image-subcontainer{
-    width: 25%;
+    /*width: 26%;*/
   }
 }
 
 @media only screen and (max-width: 1025px) {
   .image-subcontainer{
-    width: 33%;
+    /*width: 33%;*/
   }
+}
+
+@media only screen and (max-width: 870px) {
+  /* Portfolio Page */
+  .image-banner span {
+    font-size: 0.8rem;
+  }
+  /********************/
 }
 
 @media only screen and (max-width: 812px) {
@@ -92,15 +167,19 @@ body{
   }
 }
 
-@media only screen and (max-width: 692px) {
+@media only screen and (max-width: 730px) {
   .nav{
     border-bottom: none;
+    height: 100%;
   }
 
   .logo{
     display: block;
-    clear: both;
-    margin: auto;
+    float: none;
+    margin: auto !important;
+    padding: 5px 20px 5px 20px;
+    text-align: center;
+    width: 70%;
   }
   .nav-links{
     display: block;
@@ -108,6 +187,7 @@ body{
     background-color: white;
     border-bottom: 2px solid #CCCCCC;
     margin-bottom: 50px;
+    margin-right: auto !important;
   }
   .nav-links ul{
     width: 100%;
@@ -115,5 +195,19 @@ body{
   .nav-links ul li{
     display: block;
     text-align: center;
+    line-height: 1.5rem;    /* 150% of the root font size (Outermost DIV, parent of all divs, in this case body) */
   }
+  .nav-links ul li:not(:last-child):after {
+    content: none;
+  }
+
+  /* Portfolio Page */
+  .image-banner{
+    bottom: 0%;
+  }
+
+  .image-banner span {
+    font-size: 0.4rem;
+  }
+  /*************************/
 }
