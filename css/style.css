@@ -199,3 +199,10 @@ body{
   }
   /*************************/
 }
+
+@media only screen and (max-width: 500px) {
+  .image-subcontainer{
+      float: none;
+      margin: auto;
+  }
+}
